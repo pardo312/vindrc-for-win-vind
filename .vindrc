@@ -1,0 +1,80 @@
+"-------------------------------Options------------------------------
+
+set autotrack_popup 
+set initmode = gn 
+set cursor_accel = 30
+
+"-------------------------------Changing Modes------------------------------
+"Insert Mode to other modes
+
+inoremap <c-alt-,> to_gui_normal
+inoremap <c-alt-.> to_edi_normal
+inoremap <c-alt-'> to_resident
+
+"Resident Mode to other modes
+rnoremap <c-alt-;> to_insert
+rnoremap <c-alt-,> to_gui_normal
+rnoremap <c-alt-.> to_edi_normal
+
+"GUI Mode to other modes
+gnnoremap ' to_insert
+gnnoremap ; to_resident
+gnnoremap <c-alt-.> to_edi_normal
+
+gvnoremap v to_gui_normal
+gvnoremap ' to_insert
+gvnoremap ; to_resident
+gvnoremap <c-alt-.> to_edi_normal
+
+gnnoremap i to_gui_normal
+gvnoremap i to_gui_visual
+
+"Editor Mode to other modes
+ennoremap ' to_insert
+ennoremap ; to_resident
+ennoremap <c-alt-,> to_gui_normal
+
+evnoremap v to_edi_normal
+evnoremap ' to_insert
+evnoremap ; to_resident
+evnoremap <c-alt-,> to_gui_normal
+
+ennoremap i to_edi_normal
+evnoremap i to_edi_visual
+
+"-------------------------------Removing CTRL from normal mouse controls------------------------------
+
+"Windows controls
+gnnoremap we arrange_windows
+gnnoremap ws switch_window
+gnnoremap wr rotate_windows
+gnnoremap wq close_current_window
+gnnoremap wu maximize_current_window
+gnnoremap wm minimize_current_window
+gnnoremap wt window_resizer
+
+gnnoremap wh select_left_window
+gnnoremap wj select_lower_window
+gnnoremap wk select_upper_window
+gnnoremap wl select_right_window
+
+"Desktop controls
+gnnoremap dh switch_to_left_vdesktop
+gnnoremap dl switch_to_right_vdesktop
+gnnoremap ds taskview
+
+"Mouse controls
+gnnoremap H scroll_up_halfpage
+gnnoremap L scroll_down_halfpage
+gvnoremap H scroll_up_halfpage
+gvnoremap L scroll_down_halfpage
+
+"F replacement for f
+gnnoremap i easy_click_hover
+gnnoremap f easy_click_left
+gnnoremap r jump_cursor_with_keybrd_layout
+
+"-------------------------------Edit Mode remaping------------------------------
+ennoremap e move_caret_word_forward
+evnoremap e move_caret_word_forward
+ennoremap s save
