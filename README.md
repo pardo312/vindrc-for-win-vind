@@ -1,0 +1,1 @@
+# vindrc-for-win-vind
